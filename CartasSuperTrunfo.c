@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-int main() {
+int main(){
 
-    char estado1 [15];
+    char estado1 [10];
     char codigo1 [10];
     char nome1 [30];
     int populacao1;
@@ -41,7 +41,7 @@ int main() {
     scanf("%d", &pontosturisticos1);
     printf("Pontos turísticos: %d\n\n", pontosturisticos1);
 
-    char estado2 [15];
+    char estado2 [10];
     char codigo2 [10];
     char nome2 [30];
     int populacao2;
@@ -77,6 +77,26 @@ int main() {
 
     printf("Digite a quantidade de pontos turísticos: ");
     scanf("%d", &pontosturisticos2);
-    printf("Pontos turísticos: %d\n", pontosturisticos2);
+    printf("Pontos turísticos: %d\n\n", pontosturisticos2);
+
+    printf("Carta 01: \n");
+    printf("Estado: %s\n", estado1);
+    printf("Código: %s\n", codigo1);
+    printf("Nome: %s\n", nome1);
+    printf("População: %d\n", populacao1);
+    printf("Área: %fkm²\n", area1);
+    printf("PIB: %f bilhões de reais\n", pib1);
+    printf("Pontos turísticos: %d\n\n", pontosturisticos1);
+
+    printf("Carta 02: \n");
+    printf("Estado: %s\n", estado2);
+    printf("Código: %s\n", codigo2);
+    printf("Nome: %s\n", nome2);
+    printf("População: %d\n", populacao2);
+    printf("Área: %fkm²\n", area2);
+    printf("PIB: %f bilhões de reais\n", pib2);
+    printf("Pontos turísticos: %d\n\n", pontosturisticos2);
+
+    return 0;
 
 }
