@@ -35,7 +35,7 @@ int main(){
 
     printf("Digite o PIB: ");
     scanf("%f", &pib1);
-    printf("PIB: %f bilhões de reais\n", pib1);
+    printf("PIB: %.2f bilhões de reais\n", pib1);
 
     printf("Digite a quantidade de pontos turísticos: ");
     scanf("%d", &pontosturisticos1);
@@ -73,7 +73,7 @@ int main(){
 
     printf("Digite o PIB: ");
     scanf("%f", &pib2);
-    printf("PIB: %f bilhões de reais\n", pib2);
+    printf("PIB: %.2f bilhões de reais\n", pib2);
 
     printf("Digite a quantidade de pontos turísticos: ");
     scanf("%d", &pontosturisticos2);
@@ -85,7 +85,7 @@ int main(){
     printf("Nome: %s\n", nome1);
     printf("População: %d\n", populacao1);
     printf("Área: %.2fkm²\n", area1);
-    printf("PIB: %f bilhões de reais\n", pib1);
+    printf("PIB: %.2f bilhões de reais\n", pib1);
     printf("Pontos turísticos: %d\n\n", pontosturisticos1);
 
     printf("Carta 02: \n");
@@ -94,7 +94,7 @@ int main(){
     printf("Nome: %s\n", nome2);
     printf("População: %d\n", populacao2);
     printf("Área: %.2fkm²\n", area2);
-    printf("PIB: %f bilhões de reais\n", pib2);
+    printf("PIB: %.2f bilhões de reais\n", pib2);
     printf("Pontos turísticos: %d\n\n", pontosturisticos2);
 
     return 0;
