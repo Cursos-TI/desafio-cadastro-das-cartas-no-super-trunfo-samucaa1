@@ -1,10 +1,9 @@
 #include <stdio.h>
 
-int main(){
-
+int main() {
     char estado1;
-    char codigo1 [4];
-    char nome1 [30];
+    char codigo1[4];
+    char nome1[30];
     int populacao1;
     float area1;
     float pib1;
@@ -16,7 +15,7 @@ int main(){
     printf("Carta 1:\n\n");
 
     printf("Digite o Estado: ");
-    scanf("%c", &estado1);
+    scanf(" %c", &estado1);
     printf("Estado: %c\n", estado1);
 
     printf("Digite o código da carta: ");
@@ -43,12 +42,26 @@ int main(){
     scanf("%d", &pontosturisticos1);
     printf("Pontos turísticos: %d\n\n", pontosturisticos1);
 
-    densidadepopulacional1 = 0.0f; (float) (populacao1 / area1);
-    pibpercapita1 = 0.0f; (float) (pib1 * 1000000000.0 / populacao1);
+    // Densidade populacional - verificação de divisão por zero
+    if (area1 != 0.0f) {
+        densidadepopulacional1 = (float)populacao1 / area1;
+    } else {
+        densidadepopulacional1 = 0.0f;
+        printf("Atenção: Área da cidade da Carta 1 é zero. Densidade definida como 0.\n");
+    }
 
+    // PIB per capita - verificação de divisão por zero
+    if (populacao1 != 0) {
+        pibpercapita1 = (pib1 * 1000000000.0f) / (float)populacao1;
+    } else {
+        pibpercapita1 = 0.0f;
+        printf("Atenção: População da cidade da Carta 1 é zero. PIB per Capita definido como 0.\n");
+    }
+
+    // Carta 2
     char estado2;
-    char codigo2 [4];
-    char nome2 [30];
+    char codigo2[4];
+    char nome2[30];
     int populacao2;
     float area2;
     float pib2;
@@ -59,7 +72,7 @@ int main(){
     printf("Carta 2:\n\n");
 
     printf("Digite o Estado: ");
-    scanf("%c", &estado2);
+    scanf(" %c", &estado2);
     printf("Estado: %c\n", estado2);
 
     printf("Digite o código da carta: ");
@@ -86,10 +99,24 @@ int main(){
     scanf("%d", &pontosturisticos2);
     printf("Pontos turísticos: %d\n\n", pontosturisticos2);
 
-    densidadepopulacional2 = 0.0f; (float) (populacao2 / area2);
-    pibpercapita2 = 0.0f; (float) (pib2 * 1000000000.0 / populacao2);
+    // Densidade populacional - verificação de divisão por zero
+    if (area2 != 0.0f) {
+        densidadepopulacional2 = (float)populacao2 / area2;
+    } else {
+        densidadepopulacional2 = 0.0f;
+        printf("Atenção: Área da cidade da Carta 2 é zero. Densidade definida como 0.\n");
+    }
 
-    printf("Carta 01: \n");
+    // PIB per capita - verificação de divisão por zero
+    if (populacao2 != 0) {
+        pibpercapita2 = (pib2 * 1000000000.0f) / (float)populacao2;
+    } else {
+        pibpercapita2 = 0.0f;
+        printf("Atenção: População da cidade da Carta 2 é zero. PIB per Capita definido como 0.\n");
+    }
+
+    // Exibição final
+    printf("\nCarta 01:\n");
     printf("Estado: %c\n", estado1);
     printf("Código: %s\n", codigo1);
     printf("Nome: %s\n", nome1);
@@ -100,8 +127,7 @@ int main(){
     printf("Densidade Populacional: %.2f hab/km²\n", densidadepopulacional1);
     printf("PIB per Capita: %.2f reais\n\n", pibpercapita1);
 
-
-    printf("Carta 02: \n");
+    printf("Carta 02:\n");
     printf("Estado: %c\n", estado2);
     printf("Código: %s\n", codigo2);
     printf("Nome: %s\n", nome2);
@@ -113,5 +139,4 @@ int main(){
     printf("PIB per Capita: %.2f reais\n\n", pibpercapita2);
 
     return 0;
-
 }
