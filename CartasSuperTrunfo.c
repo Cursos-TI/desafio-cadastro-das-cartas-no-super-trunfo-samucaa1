@@ -2,7 +2,7 @@
 
 int main(){
 
-    char estado1 [1];
+    char estado1;
     char codigo1 [4];
     char nome1 [30];
     int populacao1;
@@ -16,8 +16,8 @@ int main(){
     printf("Carta 1:\n\n");
 
     printf("Digite o Estado: ");
-    scanf("%s", estado1);
-    printf("Estado: %s\n", estado1);
+    scanf("%c", &estado1);
+    printf("Estado: %c\n", estado1);
 
     printf("Digite o código da carta: ");
     scanf(" %3s", codigo1);
@@ -46,7 +46,7 @@ int main(){
     densidadepopulacional1 = 0.0f; (float) (populacao1 / area1);
     pibpercapita1 = 0.0f; (float) (pib1 * 1000000000.0 / populacao1);
 
-    char estado2 [1];
+    char estado2;
     char codigo2 [4];
     char nome2 [30];
     int populacao2;
@@ -59,8 +59,8 @@ int main(){
     printf("Carta 2:\n\n");
 
     printf("Digite o Estado: ");
-    scanf("%s", estado2);
-    printf("Estado: %s\n", estado2);
+    scanf("%c", &estado2);
+    printf("Estado: %c\n", estado2);
 
     printf("Digite o código da carta: ");
     scanf(" %3s", codigo2);
@@ -90,7 +90,7 @@ int main(){
     pibpercapita2 = 0.0f; (float) (pib2 * 1000000000.0 / populacao2);
 
     printf("Carta 01: \n");
-    printf("Estado: %s\n", estado1);
+    printf("Estado: %c\n", estado1);
     printf("Código: %s\n", codigo1);
     printf("Nome: %s\n", nome1);
     printf("População: %d\n", populacao1);
@@ -102,7 +102,7 @@ int main(){
 
 
     printf("Carta 02: \n");
-    printf("Estado: %s\n", estado2);
+    printf("Estado: %c\n", estado2);
     printf("Código: %s\n", codigo2);
     printf("Nome: %s\n", nome2);
     printf("População: %d\n", populacao2);
