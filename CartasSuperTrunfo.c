@@ -4,11 +4,13 @@ int main(){
 
     char estado1 [10];
     char codigo1 [10];
-    char nome1 [40];
+    char nome1 [30];
     int populacao1;
     float area1;
     float pib1;
     int pontosturisticos1;
+    float densidadepopulacional1;
+    float pibpercapita1;
 
     printf("Cartas Super Trunfo\n\n");
     printf("Carta 1:\n\n");
@@ -41,6 +43,9 @@ int main(){
     scanf("%d", &pontosturisticos1);
     printf("Pontos turísticos: %d\n\n", pontosturisticos1);
 
+    densidadepopulacional1 = (populacao1 / area1);
+    pibpercapita1 = (pib1 / populacao1);
+
     char estado2 [10];
     char codigo2 [10];
     char nome2 [30];
@@ -48,6 +53,8 @@ int main(){
     float area2;
     float pib2;
     int pontosturisticos2;
+    float densidadepopulacional2;
+    float pibpercapita2;
 
     printf("Carta 2:\n\n");
 
@@ -79,6 +86,9 @@ int main(){
     scanf("%d", &pontosturisticos2);
     printf("Pontos turísticos: %d\n\n", pontosturisticos2);
 
+    densidadepopulacional2 = (populacao2 / area2);
+    pibpercapita2 = (pib2 / populacao2);
+
     printf("Carta 01: \n");
     printf("Estado: %s\n", estado1);
     printf("Código: %s\n", codigo1);
@@ -86,7 +96,10 @@ int main(){
     printf("População: %d\n", populacao1);
     printf("Área: %.2fkm²\n", area1);
     printf("PIB: %.2f bilhões de reais\n", pib1);
-    printf("Pontos turísticos: %d\n\n", pontosturisticos1);
+    printf("Pontos turísticos: %d\n", pontosturisticos1);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadepopulacional1);
+    printf("PIB per Capita: %f reais\n\n", pibpercapita1);
+
 
     printf("Carta 02: \n");
     printf("Estado: %s\n", estado2);
@@ -95,7 +108,9 @@ int main(){
     printf("População: %d\n", populacao2);
     printf("Área: %.2fkm²\n", area2);
     printf("PIB: %.2f bilhões de reais\n", pib2);
-    printf("Pontos turísticos: %d\n\n", pontosturisticos2);
+    printf("Pontos turísticos: %d\n", pontosturisticos2);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadepopulacional2);
+    printf("PIB per Capita: %f reais\n\n", pibpercapita2);
 
     return 0;
 
